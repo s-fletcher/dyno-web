@@ -27,7 +27,7 @@ export const DownloadButton: FC = () => {
   };
 
   return (
-    <Button onClick={onClick} className="mt-8">
+    <Button onClick={onClick} size="lg" className="mt-8 rounded-2xl">
       <BsApple className="mr-2" /> Download
     </Button>
   );
