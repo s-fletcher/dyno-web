@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-grow bg-primary-foreground flex-col items-center justify-between">
-      <div className="bg-background w-full p-24 pb-48 flex flex-col items-center">
+      <div className="bg-background w-full pt-24 pb-40 flex flex-col items-center">
         <div className="flex flex-col gap-2 text-center">
           <h1
             className={cn(
