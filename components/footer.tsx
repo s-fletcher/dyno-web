@@ -10,12 +10,22 @@ export const Footer: FC = () => {
       </div>
       <div className="px-6 py-10 flex flex-col gap-1">
         <p className="text-xs">
-          Support{" "}
-          <Link className="hover:underline" href="mailto:dyno@samfletcher.me">
+          Built by{" "}
+          <Link
+            className="underline font-medium underline-offset-4"
+            href="https://samfletcher.me"
+          >
+            samfletcher
+          </Link>
+          . Send feedback or questions to{" "}
+          <Link
+            className="underline font-medium underline-offset-4"
+            href="mailto:dyno@samfletcher.me"
+          >
             dyno@samfletcher.me
           </Link>
+          .
         </p>
-        <p className="text-xs">© 2024 Dyno</p>
       </div>
     </footer>
   );
