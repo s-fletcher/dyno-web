@@ -6,6 +6,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
       </body>
+      <GoogleAnalytics gaId="G-Q9T8JC386J" />
     </html>
   );
 }
