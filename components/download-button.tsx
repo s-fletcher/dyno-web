@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { BsApple } from "react-icons/bs";
 import yaml from "js-yaml";
 import { useRouter } from "next/navigation";
+import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
 
 type Latest = {
   version: string;
@@ -21,6 +22,8 @@ export const DownloadButton: FC = () => {
       "https://dyno-releases.s3.us-east-1.amazonaws.com/latest-mac.yml"
     ).then((res) => res.text());
     const latest = yaml.load(response) as Latest;
+    sendGTMEvent({ event: "downloadButtonClicked", release: latest });
+    sendGAEvent({ event: "downloadButtonClicked", release: latest });
     router.push(
       `https://dyno-releases.s3.us-east-1.amazonaws.com/${latest.path}`
     );

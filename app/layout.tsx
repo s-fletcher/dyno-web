@@ -6,7 +6,7 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/react";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +32,7 @@ export default function RootLayout({
         <Analytics />
       </body>
       <GoogleAnalytics gaId="G-8DZ396HR5N" />
+      <GoogleTagManager gtmId="GTM-NS4KM2SN" />
     </html>
   );
 }
